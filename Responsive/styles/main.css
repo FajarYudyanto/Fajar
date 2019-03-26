@@ -1,0 +1,63 @@
+/* main.css */
+
+.container {
+  background: #eee;
+  overflow: auto;
+}
+
+.container .col {
+    width: 27%;
+    padding: 30px 3.15% 0;
+    float: left;
+}
+
+/* TODO 3 - style the page */
+
+@media screen and (max-width: 48rem) {
+.container .col {
+width: 95%;
+}
+}
+/* sytax diatas sebuah media query yang berguna untuk memastikan 
+   ukuran sebuah teks agar bisa dibaca. untuk default dari web 
+   adalah 48rem = 768pixel yang dimana jika ukuran spesifik layar 
+   melebihi ukuran itu akan lebih melebar maka secara responsive 
+   tampilan ini akan berubah menjadi 90% maka akan mempengaruhi container dan col .
+   */
+
+.container {
+display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+/* syntax diatas digunakan agar bisa diakases menggunakan os ios dan 
+	safari untuk pengaksesan webkit-box  */
+display: -ms-flexbox; /* TWEENER - IE 10 */
+/* syntax diatas digunakan agar bisa diakases menggunakan internet explorer 
+	untuk penggunaan ms-flexbox  */
+display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+/* syntax diatas digunakan agar bisa diakases menggunakan Firefox Chrome, Opera 
+	untuk penggunaan ms-flexbox  */
+background: #eee;
+/* syntax diatas digunakan untuk pewarnaan dengan menggunakan warna kode #eee
+	yang digunakan untuk mengaktifkan warna grayscale */
+overflow: auto;
+/* syntax diatas digunakan agar konten bisa diatur jika yang berlebih akan menggunakan scroll */ 
+}
+.container .col {
+flex: 1;
+padding: 1rem;
+}
+/* syntax diatas digunakan untuk pengaturan container dan col yang dibuat dengan flex 1 agar bisa flexible
+	kemudian baggian padding ini adalan 1rem atau kalau di konversi menjadi 16px
+*/
+
+@media screen and (max-width: 48rem) {
+.container {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+flex-flow: column;
+}
+}
+/* syntax diatas digunakan untuk mengatur tampilan media query dan lax viewport 
+	dengan ukuran 48rem atau kalau dikonversi yaitu 768px ukuran layar kemudian tampilan
+	responsive ini akan menyesuaikan dengan browswe yang digunakan
+/*
